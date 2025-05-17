@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Logo from "../common/logo";
 import emailIcon from "@assets/images/mail_icon.png";
-import linkedInIcon from "@assets/images/linkedin-logo.svg";
 
 import { GrGithub } from "react-icons/gr";
 import { FaLinkedin } from "react-icons/fa";
