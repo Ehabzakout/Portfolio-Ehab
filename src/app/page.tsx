@@ -20,7 +20,7 @@ export default function Home() {
         <Services />
         <Projects />
         <ContactMe isDarkMode={isDarkMode} />
-        <Footer />
+        <Footer isDarkMode={isDarkMode} />
       </div>
     </>
   );

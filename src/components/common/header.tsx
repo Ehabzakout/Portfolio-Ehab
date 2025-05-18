@@ -1,4 +1,4 @@
-import profileImg from "@assets/images/Untitled design.png";
+import profileImg from "@assets/images/profile-image.png";
 import handIcon from "@assets/images/hand-icon.png";
 import { GoDownload } from "react-icons/go";
 import { GoArrowRight } from "react-icons/go";
@@ -12,7 +12,11 @@ export default function Header() {
         whileInView={{ scale: 1 }}
         transition={{ duration: 0.6, type: "spring", stiffness: 100 }}
       >
-        <Image src={profileImg} alt="" className="size-32 rounded-full" />
+        <Image
+          src={profileImg}
+          alt=""
+          className="size-32 rounded-full object-cover object-top"
+        />
       </motion.div>
       <motion.h3
         initial={{ y: -20, opacity: 0 }}

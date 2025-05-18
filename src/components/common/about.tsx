@@ -1,5 +1,5 @@
 import Image from "next/image";
-import userImg from "@assets/images/Untitled design.png";
+import userImg from "@assets/images/profile-image.png";
 import vsCode from "@assets/images/vscode.png";
 import reactICon from "@assets/images/react.svg";
 import gitIcon from "@assets/images/git.png";
@@ -64,7 +64,7 @@ export default function About({ isDarkMode }: { isDarkMode: boolean }) {
       >
         About me
       </motion.h2>
-      <div className="flex w-full flex-col justify-center gap-10 lg:flex-row">
+      <div className="flex w-full flex-col justify-center gap-16 lg:flex-row">
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
           whileInView={{ opacity: 1, scale: 1 }}

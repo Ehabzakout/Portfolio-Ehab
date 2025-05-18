@@ -2,7 +2,7 @@ import freshCart from "@assets/images/fresh-cart.png";
 import kanban from "@assets/images/kanban-board.png";
 import examApp from "@assets/images/exam-app.png";
 import aroundTheWorld from "@assets/images/around-the-word.png";
-import { GoArrowRight } from "react-icons/go";
+// import { GoArrowRight } from "react-icons/go";
 import { StaticImageData } from "next/image";
 import Image from "next/image";
 import { motion } from "motion/react";
@@ -124,10 +124,10 @@ export default function Projects() {
           ))}
         </motion.ul>
       </div>
-      <button className="group mx-auto mt-10 flex w-fit cursor-pointer items-center gap-2 rounded-full border border-gray-300 px-8 py-3 text-gray-500 hover:bg-black/85 hover:text-white dark:bg-zinc-200 dark:text-black dark:hover:bg-white">
+      {/* <button className="group mx-auto mt-10 flex w-fit cursor-pointer items-center gap-2 rounded-full border border-gray-300 px-8 py-3 text-gray-500 hover:bg-black/85 hover:text-white dark:bg-zinc-200 dark:text-black dark:hover:bg-white">
         Show more
         <GoArrowRight className="my-auto mt-2.5 w-6 group-hover:animate-bounce" />
-      </button>
+      </button> */}
     </div>
   );
 }

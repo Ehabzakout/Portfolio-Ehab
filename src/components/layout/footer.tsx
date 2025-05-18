@@ -1,18 +1,23 @@
 import Image from "next/image";
 import Logo from "../common/logo";
 import emailIcon from "@assets/images/mail_icon.png";
+import whiteEmailIcon from "@assets/images/mail_icon_dark.png";
 
 import { GrGithub } from "react-icons/gr";
 import { FaLinkedin } from "react-icons/fa";
 
-export default function Footer() {
+export default function Footer({ isDarkMode }: { isDarkMode: boolean }) {
   return (
     <div className="mt-10">
       <div className="mx-auto mb-2 w-fit">
         <Logo />
       </div>
       <h3 className="flex justify-center gap-4 text-gray-400 dark:text-zinc-200">
-        <Image src={emailIcon} alt="" className="w-6 object-contain" />
+        <Image
+          src={isDarkMode ? whiteEmailIcon : emailIcon}
+          alt=""
+          className="w-6 object-contain"
+        />
         ftwehab@gmail.com
       </h3>
       <div className="mx-auto mt-3 flex justify-center gap-14 px-20 sm:w-1/2">
