@@ -7,7 +7,7 @@ import { MdOutlineArrowOutward } from "react-icons/md";
 import { RiMenu3Fill } from "react-icons/ri";
 import { IoMdClose } from "react-icons/io";
 import DarkModeIcon from "../common/dark-mode-icon";
-import { TNavProps } from "@/lib/types/component-props";
+import { TDarkModeProps } from "@/lib/types/component-props";
 
 // List of links
 const links = [
@@ -19,7 +19,7 @@ const links = [
 ];
 
 // Navbar component
-export default function Navbar({ isDarkMode, setDarkMode }: TNavProps) {
+export default function Navbar({ isDarkMode, setDarkMode }: TDarkModeProps) {
   // State to change nav style when page scroll
   const [isScrolled, setIsScrolled] = useState(false);
 
