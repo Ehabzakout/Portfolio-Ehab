@@ -4,9 +4,12 @@ import { GoDownload } from "react-icons/go";
 import { GoArrowRight } from "react-icons/go";
 import Image from "next/image";
 import { motion } from "motion/react";
+
+// Header component
 export default function Header() {
   return (
     <div className="mx-auto flex w-11/12 max-w-3xl flex-col items-center gap-4 text-center">
+      {/* User photo */}
       <motion.div
         initial={{ scale: 0 }}
         whileInView={{ scale: 1 }}
@@ -18,14 +21,18 @@ export default function Header() {
           className="size-32 rounded-full object-cover object-top"
         />
       </motion.div>
-      <motion.h3
+
+      {/* Paragraph */}
+      <motion.p
         initial={{ y: -20, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, delay: 0.3 }}
         className="font-ovo mb-3 flex items-end gap-2 text-xl md:text-2xl"
       >
         Hi! I&apos;m Ehab Waleed <Image src={handIcon} width={24} alt="" />
-      </motion.h3>
+      </motion.p>
+
+      {/* headline */}
       <motion.h1
         initial={{ y: -20, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
@@ -34,6 +41,8 @@ export default function Header() {
       >
         FrontEnd web developer
       </motion.h1>
+
+      {/* Paragraph */}
       <motion.p
         initial={{ y: -20, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
@@ -43,16 +52,21 @@ export default function Header() {
         I am a junior frontend developer with a strong foundation in JavaScript,
         specializing in React and Next.js with typescript.
       </motion.p>
+
+      {/* Anchors */}
       <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row">
+        {/* Git hub anchor */}
         <motion.a
           initial={{ y: 30, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 1, delay: 1.3 }}
-          href="#contact"
+          href="https://github.com/Ehabzakout"
           className="group flex w-fit items-center gap-2 rounded-full border bg-black px-10 py-3 text-white hover:bg-black/85 dark:bg-zinc-100 dark:text-black dark:hover:bg-white"
         >
-          Contact me <GoArrowRight className="w-4 group-hover:animate-bounce" />
+          GitHub <GoArrowRight className="w-4 group-hover:animate-bounce" />
         </motion.a>
+
+        {/* Download anchor */}
         <motion.a
           initial={{ y: 30, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}

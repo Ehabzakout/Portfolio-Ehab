@@ -1,36 +1,84 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Ehab Zakout - Frontend Developer Portfolio
 
-## Getting Started
+Welcome to my personal portfolio website! I'm **Ehab Waleed Zakout**, a passionate frontend developer transitioning into full-stack development. After over 7 years of experience as an industrial engineer, I made the bold decision to shift my career into tech—driven by resilience and a strong desire to build scalable, user-friendly web applications.
 
-First, run the development server:
+## 📌 About Me
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- 🧠 Junior frontend developer focused on **React.js**, **Next.js**, and **TypeScript**.
+- 🛠️ Currently learning **Node.js** to become a full-stack developer.
+- 💼 Background in **industrial engineering** with strong skills in quality control, task management, and workflow optimization.
+- 🌍 Rebuilding my life and career after the war in Gaza—coding is my new beginning.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🔧 Tech Stack
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Frontend:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- HTML, CSS, JavaScript, TypeScript, SASS, Tailwind CSS, Bootstrap
+- React.js, Next.js (App Router), Redux, React Query, React Router
+- UI Libraries: Material UI, Shadcn UI
 
-## Learn More
+### Form Handling & Auth:
 
-To learn more about Next.js, take a look at the following resources:
+- React Hook Form, Formik
+- Validation: Yup, Zod
+- Authentication: NextAuth
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Tools & Utilities:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Git & GitHub, Agile methods
+- Responsive Design, Lazy Loading, i18n (Next-Intl)
 
-## Deploy on Vercel
+### Others:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- C++, Basic Python
+- Microsoft Office
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🚀 Projects
+
+### ✅ [Elevate Exam Web App](#)
+
+> _Next.js, TypeScript, React Hook Form, Zod, NextAuth, Shadcn UI_
+
+- Programming exam platform with secure auth, server actions, route handlers.
+- Form validation and clean UI using latest Next.js features.
+
+### ✅ [Kanban Board](#)
+
+> _React, Vite, TypeScript_
+
+- Fully responsive task management system with drag-and-drop and local storage persistence.
+
+### ✅ [Fresh Cart – E-commerce App](#)
+
+> _React, Vite, JavaScript_
+
+- Full-featured shopping app with cart, wishlist, Stripe/Cash payments, and JWT-based auth.
+- Used Context API + React Query for data management.
+
+## 📚 Education
+
+**B.Sc. Industrial Engineering**  
+Islamic University of Gaza, 2011–2016
+
+## 🎓 Courses & Training
+
+- **May 2025** – Advanced Frontend Developer, Elevate Academy
+- **Dec 2024** – Frontend Development (Node.js), Route Academy
+- **July 2024** – C++ Fundamentals, Gaza Sky Geeks
+- **Ongoing** – Backend Development with Node.js, Route Academy
+
+## 🌐 Contact Me
+
+- 📞 Phone: +20 104 016 6043
+- 📧 Email: [ftwehab@gmail.com]
+- 🔗 GitHub: [Ehabzakout](https://github.com/Ehabzakout)
+- 🔗 LinkedIn: [ehab-zakout](https://www.linkedin.com/in/ehab-zakout)
+
+## 🗣️ Languages
+
+- Arabic: Native
+- English: Very Good
+
+---
+
+Thanks for visiting my portfolio! I’m actively looking for junior frontend or full-stack opportunities—feel free to reach out if you're hiring or have exciting projects to collaborate on.

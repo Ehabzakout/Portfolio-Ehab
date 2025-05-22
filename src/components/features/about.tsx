@@ -1,22 +1,11 @@
 import Image from "next/image";
-import userImg from "@assets/images/profile-image.png";
-import vsCode from "@assets/images/vscode.png";
-import reactICon from "@assets/images/react.svg";
-import gitIcon from "@assets/images/git.png";
-import tailwindIcon from "@assets/images/tailwind-svgrepo-com.svg";
-import nextIcon from "@assets/images/nextjs-icon-svgrepo-com.svg";
-import reduxIcon from "@assets/images/redux-logo-svgrepo-com.svg";
-import typeScriptIcon from "@assets/images/typescript-svgrepo-com.svg";
-import nextIconWhite from "@assets/images/next.js-white.png";
-import html5 from "@assets/images/html.svg";
-import bootstrap from "@assets/images/bootstrap.png";
-import css from "@assets/images/css.svg";
-import javaScript from "@assets/images/javaScript.svg";
-import python from "@assets/images/python.svg";
+import { assets, toolsIcon } from "@assets/images/assets";
 import { FaCode } from "react-icons/fa";
 import { FaGraduationCap } from "react-icons/fa6";
 import { PiShoppingBagOpenFill } from "react-icons/pi";
 import { motion } from "motion/react";
+
+// List
 const infoList = [
   {
     icon: <FaCode className="size-7" />,
@@ -35,26 +24,14 @@ const infoList = [
   },
 ];
 
-const toolsIcon = [
-  vsCode,
-  html5,
-  css,
-  javaScript,
-  typeScriptIcon,
-  python,
-  reactICon,
-  nextIcon,
-  gitIcon,
-  bootstrap,
-  tailwindIcon,
-  reduxIcon,
-];
+// About component
 export default function About({ isDarkMode }: { isDarkMode: boolean }) {
   return (
     <div
       id="about"
       className="w-full scroll-mt-10 px-[12%] pt-10 sm:scroll-mt-28"
     >
+      {/* headline */}
       <motion.h2
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -64,6 +41,8 @@ export default function About({ isDarkMode }: { isDarkMode: boolean }) {
       >
         About me
       </motion.h2>
+
+      {/* User info */}
       <div className="flex w-full flex-col justify-center gap-16 lg:flex-row">
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
@@ -72,9 +51,16 @@ export default function About({ isDarkMode }: { isDarkMode: boolean }) {
           viewport={{ once: true }}
           className="mx-auto flex w-46 max-w-none items-center rounded-3xl sm:w-56"
         >
-          <Image src={userImg} alt="user" className="w-full rounded-3xl" />
+          {/* User photo */}
+          <Image
+            src={assets.userImg}
+            alt="user"
+            className="w-full rounded-3xl"
+          />
         </motion.div>
+
         <div className="mx-auto flex-1">
+          {/* Summary */}
           <motion.p
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -89,6 +75,8 @@ export default function About({ isDarkMode }: { isDarkMode: boolean }) {
             focusing on clean, readable, and reusable code, state management,
             and performance optimization.
           </motion.p>
+
+          {/* List of information */}
           <motion.ul
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -113,6 +101,8 @@ export default function About({ isDarkMode }: { isDarkMode: boolean }) {
               </motion.li>
             ))}
           </motion.ul>
+
+          {/* Tools */}
           <motion.h4
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -121,6 +111,8 @@ export default function About({ isDarkMode }: { isDarkMode: boolean }) {
           >
             Tools I Use
           </motion.h4>
+
+          {/* List of tools */}
           <motion.ul
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -136,7 +128,11 @@ export default function About({ isDarkMode }: { isDarkMode: boolean }) {
                 className={`flex aspect-square w-12 cursor-pointer items-center justify-center rounded-lg border border-gray-400 duration-500 hover:-translate-y-1 sm:w-14`}
               >
                 <Image
-                  src={isDarkMode && tool === nextIcon ? nextIconWhite : tool}
+                  src={
+                    isDarkMode && tool === assets.nextIcon
+                      ? assets.nextIconWhite
+                      : tool
+                  }
                   alt=""
                   width={30}
                 />

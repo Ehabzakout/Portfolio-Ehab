@@ -1,15 +1,15 @@
 "use client";
+import { TDarkModeProps } from "@/lib/types/component-props";
 import { SunMedium } from "lucide-react";
-import { SetStateAction, useEffect } from "react";
+import { useEffect } from "react";
 import { FiMoon } from "react-icons/fi";
 
+// Dark mode icon component
 export default function DarkModeIcon({
   isDarkMode,
   setDarkMode,
-}: {
-  isDarkMode: boolean;
-  setDarkMode: React.Dispatch<SetStateAction<boolean>>;
-}) {
+}: TDarkModeProps) {
+  // Hook to set mode for first time
   useEffect(() => {
     if (
       localStorage.theme === "dark" ||
@@ -20,6 +20,7 @@ export default function DarkModeIcon({
     else setDarkMode(false);
   }, []);
 
+  // Hook to set mode
   useEffect(() => {
     if (isDarkMode) {
       document.documentElement.classList.add("dark");

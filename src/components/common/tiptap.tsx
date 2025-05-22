@@ -10,7 +10,7 @@ import StarterKit from "@tiptap/starter-kit";
 import Document from "@tiptap/extension-document";
 import Paragraph from "@tiptap/extension-paragraph";
 import Text from "@tiptap/extension-text";
-import React, { SetStateAction } from "react";
+import React from "react";
 import {
   AlignCenter,
   AlignLeft,
@@ -26,10 +26,15 @@ import {
   Strikethrough,
 } from "lucide-react";
 import ToggleDemo from "./toggle";
+import { TTipTapProps } from "@/lib/types/component-props";
+
+// Menu bar component
 const MenuBar = ({ editor }: { editor: Editor | null }) => {
   if (!editor) {
     return null;
   }
+
+  // Buttons list
   const buttons = [
     {
       icon: <Heading1 />,
@@ -97,6 +102,7 @@ const MenuBar = ({ editor }: { editor: Editor | null }) => {
 
   return (
     <div className="mx-auto flex w-full flex-wrap items-center justify-center gap-3 rounded-lg border border-zinc-300 bg-white px-5 py-1 dark:bg-zinc-900">
+      {/* Tip tap buttons bar */}
       {buttons.map(({ icon, action, pressed, className = "" }, index) => (
         <ToggleDemo
           action={action}
@@ -111,21 +117,14 @@ const MenuBar = ({ editor }: { editor: Editor | null }) => {
   );
 };
 
-export default function Tiptap({
-  onChange,
-  setPost,
-  className,
-}: {
-  onChange: (value: string) => void;
-  setPost: React.Dispatch<SetStateAction<string | null>>;
-  className: string;
-}) {
+// text area component
+export default function Tiptap({ onChange, setPost, className }: TTipTapProps) {
+  //Hook to handle tip tap options
   const editor = useEditor({
     extensions: [
       Document,
       Paragraph,
       Text,
-
       Typography,
       StarterKit.configure({
         bulletList: { HTMLAttributes: { class: "list-disc ml-4" } },

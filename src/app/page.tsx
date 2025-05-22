@@ -1,10 +1,10 @@
 "use client";
-import About from "@/components/common/about";
-import ContactMe from "@/components/common/contact";
-import Header from "@/components/common/header";
-import Navbar from "@/components/common/navbar";
-import Projects from "@/components/common/projects";
-import Services from "@/components/common/services";
+import About from "@/components/features/about";
+import ContactMe from "@/components/features/contact";
+import Header from "@/components/features/header";
+import Navbar from "@/components/features/navbar";
+import Projects from "@/components/features/projects";
+import Services from "@/components/features/services";
 import Footer from "@/components/layout/footer";
 
 import { useState } from "react";
