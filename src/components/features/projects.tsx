@@ -1,3 +1,4 @@
+"use client";
 import freshCart from "@assets/images/fresh-cart.png";
 import kanban from "@assets/images/kanban-board.png";
 import examApp from "@assets/images/exam-app.png";
@@ -116,7 +117,7 @@ export default function Projects() {
               <div className="mt-5 mb-4 flex justify-between px-4">
                 {/* Github anchor */}
                 <a href={github} target="_blank">
-                  <button className="cursor-pointer rounded-full border border-gray-300 bg-zinc-50 px-5 hover:bg-black hover:text-white dark:border-none dark:bg-zinc-800 dark:hover:bg-zinc-700">
+                  <button className="cursor-pointer rounded-full border border-gray-300 bg-zinc-50 px-5 py-2 text-sm hover:bg-black hover:text-white md:text-[16px] dark:border-none dark:bg-zinc-800 dark:hover:bg-zinc-700">
                     Github Repo
                   </button>
                 </a>
@@ -124,7 +125,7 @@ export default function Projects() {
                 {/* Show anchor demo if is exist */}
                 {demo && (
                   <a href={demo} target="_blank">
-                    <button className="cursor-pointer rounded-full border border-gray-300 bg-zinc-50 px-5 hover:bg-black hover:text-white dark:border-none dark:bg-zinc-800 dark:hover:bg-zinc-700">
+                    <button className="cursor-pointer rounded-full border border-gray-300 bg-zinc-50 px-5 py-2 text-sm hover:bg-black hover:text-white md:text-[16px] dark:border-none dark:bg-zinc-800 dark:hover:bg-zinc-700">
                       Demo
                     </button>
                   </a>

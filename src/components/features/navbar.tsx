@@ -2,12 +2,12 @@
 import Image from "next/image";
 import bgNavbar from "@assets/images/header-bg-color.png";
 import Logo from "./logo";
-import { useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import { MdOutlineArrowOutward } from "react-icons/md";
 import { RiMenu3Fill } from "react-icons/ri";
 import { IoMdClose } from "react-icons/io";
 import DarkModeIcon from "../common/dark-mode-icon";
-import { TDarkModeProps } from "@/lib/types/component-props";
+import { themeContext } from "../providers/theme.provider";
 
 // List of links
 const links = [
@@ -19,7 +19,11 @@ const links = [
 ];
 
 // Navbar component
-export default function Navbar({ isDarkMode, setDarkMode }: TDarkModeProps) {
+export default function Navbar() {
+  // Context for theme mode
+  const theme = useContext(themeContext);
+  const isDarkMode = theme?.isDarkMode;
+
   // State to change nav style when page scroll
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -80,7 +84,7 @@ export default function Navbar({ isDarkMode, setDarkMode }: TDarkModeProps) {
 
         <div className="flex items-center gap-4">
           {/* Icon to change mode */}
-          <DarkModeIcon isDarkMode={isDarkMode} setDarkMode={setDarkMode} />
+          <DarkModeIcon />
 
           {/* Anchor */}
           <a

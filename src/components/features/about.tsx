@@ -1,9 +1,12 @@
+"use client";
 import Image from "next/image";
 import { assets, toolsIcon } from "@assets/images/assets";
 import { FaCode } from "react-icons/fa";
 import { FaGraduationCap } from "react-icons/fa6";
 import { PiShoppingBagOpenFill } from "react-icons/pi";
 import { motion } from "motion/react";
+import { useContext } from "react";
+import { themeContext } from "../providers/theme.provider";
 
 // List
 const infoList = [
@@ -25,7 +28,11 @@ const infoList = [
 ];
 
 // About component
-export default function About({ isDarkMode }: { isDarkMode: boolean }) {
+export default function About() {
+  // Context for theme mode
+  const theme = useContext(themeContext);
+  const isDarkMode = theme?.isDarkMode;
+
   return (
     <div
       id="about"

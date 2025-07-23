@@ -1,10 +1,17 @@
+"use client";
 import bgContact from "@assets/images/header-bg-color.png";
 import Image from "next/image";
 import ContactForm from "../common/contact-form";
 import { motion } from "motion/react";
+import { themeContext } from "../providers/theme.provider";
+import { useContext } from "react";
 
 // Contact me component
-export default function ContactMe({ isDarkMode }: { isDarkMode: boolean }) {
+export default function ContactMe() {
+  // Context for theme mode
+  const theme = useContext(themeContext);
+  const isDarkMode = theme?.isDarkMode;
+
   return (
     <div
       id="contact"

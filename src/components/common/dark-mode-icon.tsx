@@ -1,23 +1,28 @@
 "use client";
-import { TDarkModeProps } from "@/lib/types/component-props";
+
 import { SunMedium } from "lucide-react";
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
 import { FiMoon } from "react-icons/fi";
+import { themeContext } from "../providers/theme.provider";
 
 // Dark mode icon component
-export default function DarkModeIcon({
-  isDarkMode,
-  setDarkMode,
-}: TDarkModeProps) {
+export default function DarkModeIcon() {
+  // Context for theme mode
+  const theme = useContext(themeContext);
+  const isDarkMode = theme?.isDarkMode;
+  const setDarkMode = theme?.setISDarkMode;
+
   // Hook to set mode for first time
   useEffect(() => {
-    if (
-      localStorage.theme === "dark" ||
-      (!("theme" in localStorage) &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches)
-    )
-      setDarkMode(true);
-    else setDarkMode(false);
+    if (isDarkMode && setDarkMode) {
+      if (
+        localStorage.theme === "dark" ||
+        ("theme" in localStorage &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches)
+      )
+        setDarkMode(true);
+      else setDarkMode(false);
+    }
   }, []);
 
   // Hook to set mode
@@ -35,11 +40,14 @@ export default function DarkModeIcon({
     <div>
       <button className="cursor-pointer">
         {!isDarkMode ? (
-          <FiMoon className="size-6" onClick={() => setDarkMode(!isDarkMode)} />
+          <FiMoon
+            className="size-6"
+            onClick={() => setDarkMode && setDarkMode(!isDarkMode)}
+          />
         ) : (
           <SunMedium
             className="size-6"
-            onClick={() => setDarkMode(!isDarkMode)}
+            onClick={() => setDarkMode && setDarkMode(!isDarkMode)}
           />
         )}
       </button>

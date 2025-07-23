@@ -1,12 +1,19 @@
+"use client";
 import Image from "next/image";
 import Logo from "../features/logo";
 import emailIcon from "@assets/images/mail_icon.png";
 import whiteEmailIcon from "@assets/images/mail_icon_dark.png";
 import { GrGithub } from "react-icons/gr";
 import { FaLinkedin } from "react-icons/fa";
+import { useContext } from "react";
+import { themeContext } from "../providers/theme.provider";
 
 // Footer component
-export default function Footer({ isDarkMode }: { isDarkMode: boolean }) {
+export default function Footer() {
+  // Context for theme mode
+  const theme = useContext(themeContext);
+  const isDarkMode = theme?.isDarkMode;
+
   return (
     <div className="mt-10">
       {/* Logo */}
