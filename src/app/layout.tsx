@@ -29,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`${outFit.variable} ${ovo.variable} mx-auto max-w-7xl overflow-x-hidden leading-8 antialiased`}
+        className={`${outFit.variable} ${ovo.variable} mx-auto w-full overflow-x-hidden px-3 leading-8 antialiased md:max-w-7xl`}
       >
         <main>{children}</main>
       </body>

@@ -12,7 +12,12 @@ import bootstrap from "./bootstrap.png";
 import css from "@assets/images/css.svg";
 import javaScript from "./javaScript.svg";
 import python from "./python.svg";
-
+import nodeJs from "@assets/images/icons8-node-js-100.png";
+import sql from "@assets/images/icons8-sql-100.png";
+import mongoDB from "@assets/images/icons8-mongodb-24.png";
+import nestjs from "@assets/images/icons8-nestjs-100.png";
+import graphQl from "@assets/images/icons8-graphql-100.png";
+import express from "@assets/images/icons8-express-js-100.png";
 export const toolsIcon = [
   vsCode,
   html5,
@@ -26,6 +31,12 @@ export const toolsIcon = [
   bootstrap,
   tailwindIcon,
   reduxIcon,
+  nodeJs,
+  sql,
+  mongoDB,
+  nestjs,
+  graphQl,
+  express,
 ];
 
 export const assets = {

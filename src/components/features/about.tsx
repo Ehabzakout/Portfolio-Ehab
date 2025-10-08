@@ -1,29 +1,42 @@
 "use client";
 import Image from "next/image";
 import { assets, toolsIcon } from "@assets/images/assets";
-import { FaCode } from "react-icons/fa";
+import { FaCode, FaLaptopCode } from "react-icons/fa";
 import { FaGraduationCap } from "react-icons/fa6";
-import { PiShoppingBagOpenFill } from "react-icons/pi";
+import { AiFillCode } from "react-icons/ai";
 import { motion } from "motion/react";
 import { useContext } from "react";
 import { themeContext } from "../providers/theme.provider";
-
+import { PiBagSimpleFill } from "react-icons/pi";
 // List
 const infoList = [
   {
     icon: <FaCode className="size-7" />,
     title: "Languages",
-    description: "HTML, CSS, JavaScript, React Js, Next Js",
+    description: "HTML, CSS, JavaScript, TypeScript, Python, SQL",
+  },
+  {
+    icon: <FaLaptopCode className="size-7" />,
+    title: "FrontEnd",
+    description:
+      "ReactJs, NextJs, Tailwind, React Query, Redux, Shadcn, React Native, PWA",
+  },
+  {
+    icon: <AiFillCode className="size-7" />,
+    title: "BackEnd",
+    description:
+      "NodeJS, ExpressJS, MongoDB, MySql, Socket.io, GraphQl, NestJs",
+  },
+
+  {
+    icon: <PiBagSimpleFill className="size-7" />,
+    title: "Projects",
+    description: "Built more than 6 projects",
   },
   {
     icon: <FaGraduationCap className="size-7" />,
     title: "Education",
     description: "Bachelor degree in industrial engineering",
-  },
-  {
-    icon: <PiShoppingBagOpenFill className="size-7" />,
-    title: "Projects",
-    description: "Built more than 4 projects",
   },
 ];
 
@@ -73,14 +86,17 @@ export default function About() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.8 }}
             viewport={{ once: true }}
-            className="font-ovo mb-10 max-w-2xl"
+            className="font-ovo mb-10 max-w-2xl text-center md:text-start"
           >
-            I am a junior frontend developer,s specializing in React and Next.js
-            with typescript. I also have experience with Node.js and am
-            currently learning backend development using Node.js to become a
-            full-stack developer. I have built several web applications,
-            focusing on clean, readable, and reusable code, state management,
-            and performance optimization.
+            Full Stack Developer with strong expertise in React.js, Next.js, and
+            TypeScript, and solid backend experience using Node.js, Express,
+            MongoDB, MySQL, and Sequelize. Passionate about building scalable,
+            high-performance web and mobile applications, I focus on delivering
+            clean, maintainable, and efficient solutions. I have developed
+            multiple full-stack web applications, applying best practices in
+            state management, API integration, and performance optimization,
+            while maintaining a strong emphasis on code readability,
+            reusability, and modular architecture.
           </motion.p>
 
           {/* List of information */}

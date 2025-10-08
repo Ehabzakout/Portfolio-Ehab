@@ -3,16 +3,28 @@ import { TbWorld } from "react-icons/tb";
 import { SiGoogleearthengine } from "react-icons/si";
 import { FaProjectDiagram } from "react-icons/fa";
 import { motion } from "motion/react";
-
+import { FaMobileAlt } from "react-icons/fa";
 // Service component
 export default function Services() {
   // Service list
   const services = [
     {
       icon: <TbWorld className="size-5 text-white" />,
-      title: "frontend web developer",
+      title: "FrontEnd web developer",
       summary:
-        "front-end developer with a solid foundation in JavaScript, specializing in React, Next.js, and TypeScript.",
+        "Building modern, responsive, and user-friendly web interfaces using JavaScript, ReactJS, NextJS, and TypeScript. Focused on performance, accessibility, and smooth user experiences.",
+    },
+    {
+      icon: <TbWorld className="size-5 text-white" />,
+      title: "BackEnd web developer",
+      summary:
+        "Developing secure and scalable server-side applications using Node.js, Express.js,NextJS, MongoDB, MySQL, and RESTful APIs. Experienced in authentication, data modeling, and API integration.",
+    },
+    {
+      icon: <FaMobileAlt className="size-5 text-white" />,
+      title: "Mobile developer",
+      summary:
+        "Creating cross-platform mobile applications using React Native and Expo. Focused on delivering smooth performance, clean UI, and seamless user experiences on both iOS and Android.",
     },
     {
       icon: <FaProjectDiagram className="size-5 text-white" />,
@@ -31,7 +43,7 @@ export default function Services() {
   return (
     <div
       id="services"
-      className="w-full scroll-mt-10 px-[12%] py-10 sm:scroll-mt-28"
+      className="w-full scroll-mt-10 px-0 py-10 sm:scroll-mt-28 md:px-[12%]"
     >
       {/* Headline */}
       <motion.h2
@@ -52,8 +64,10 @@ export default function Services() {
         viewport={{ once: true }}
         className="font-ovo text-center text-zinc-500 dark:text-zinc-200"
       >
-        I am a junior frontend developer,specializing in React and Next.js with
-        typescript.
+        I am a Full Stack Developer specializing in React.js and Next.js for the
+        frontend, with strong backend expertise in Node.js, Express.js, NestJS,
+        MongoDB, and MySQL, as well as experience in React Native for mobile
+        application development.
       </motion.p>
 
       {/* Service list */}
@@ -81,7 +95,7 @@ export default function Services() {
 
               {/* Service summary */}
               <p
-                className={`line-clamp-3 h-16 text-sm text-gray-600 transition-all duration-500 dark:text-zinc-200`}
+                className={`h-28 text-sm text-gray-600 transition-all duration-500 dark:text-zinc-200`}
               >
                 {summary}
               </p>

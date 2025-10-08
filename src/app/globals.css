@@ -12,7 +12,7 @@
   --font-ovo: var(--font-ovo);
   --shadow-black: 4px 4px 10px #23232336;
   --shadow-white: 4px 4px 0 #fff;
-  --auto-grid: repeat(auto-fit, minmax(200px, 1fr));
+  --auto-grid: repeat(auto-fit, minmax(300px, 1fr));
   @keyframes bounce {
     0%,
     100% {

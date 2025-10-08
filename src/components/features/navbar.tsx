@@ -67,7 +67,7 @@ export default function Navbar() {
 
       {/* Nav  */}
       <nav
-        className={`fixed ${isScrolled && "bg-white/50 shadow-sm backdrop-blur-lg dark:bg-black/30"} z-50 mx-auto flex w-full max-w-7xl items-center justify-between px-5 py-4 lg:px-8 xl:px-[8%]`}
+        className={`fixed ${isScrolled && "bg-white/50 shadow-sm backdrop-blur-lg dark:bg-black/30"} fixed top-0 right-0 left-0 z-50 mx-auto flex w-full max-w-7xl items-center justify-between px-5 py-4 lg:px-8 xl:px-[8%]`}
       >
         <Logo />
 
