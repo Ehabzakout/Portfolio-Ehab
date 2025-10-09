@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Outfit, Ovo } from "next/font/google";
 import "./globals.css";
+import { Toaster } from "@/components/ui/sonner";
 
 const outFit = Outfit({
   variable: "--font-outfit",
@@ -32,6 +33,7 @@ export default function RootLayout({
         className={`${outFit.variable} ${ovo.variable} mx-auto w-full overflow-x-hidden px-3 leading-8 antialiased md:max-w-7xl`}
       >
         <main>{children}</main>
+        <Toaster />
       </body>
     </html>
   );

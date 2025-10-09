@@ -16,20 +16,42 @@ import { GoArrowRight } from "react-icons/go";
 import { motion } from "motion/react";
 import { contactSchema, TContactForm } from "@/lib/schema/contact.schema";
 
+import { toast } from "sonner";
+
 // Contact form
 export default function ContactForm() {
   // state to handle text area input
   const [post, setPost] = useState<string | null>(null);
-
+  const [loading, setLoading] = useState(false);
   // Hook to handle form
   const form = useForm<TContactForm>({
     resolver: zodResolver(contactSchema),
   });
 
   // Submit function
-  const onSubmit: SubmitHandler<TContactForm> = (values) => {
-    console.log(values);
-    console.log(post);
+  const onSubmit: SubmitHandler<TContactForm> = async (values) => {
+    setLoading(true);
+    try {
+      if (post) {
+        const response = await fetch("/api/send-email", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            from: values.name,
+            subject: values.email,
+            html: post,
+          }),
+        });
+        const payload = await response.json();
+        if ("error" in payload) throw new Error(payload.error);
+
+        toast.success("Thank you for contact with me");
+      }
+    } catch (error) {
+      toast.error(error as string);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -114,7 +136,10 @@ export default function ContactForm() {
           </motion.div>
 
           {/* Submit button */}
-          <Button className="group mx-auto flex w-3/4 cursor-pointer items-center gap-3 rounded-full sm:w-1/4">
+          <Button
+            disabled={loading}
+            className="group mx-auto flex w-3/4 cursor-pointer items-center gap-3 rounded-full sm:w-1/4"
+          >
             Send Now
             <GoArrowRight className="my-auto w-6 group-hover:animate-bounce" />
           </Button>
