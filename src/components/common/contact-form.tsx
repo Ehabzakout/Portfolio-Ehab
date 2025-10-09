@@ -44,11 +44,11 @@ export default function ContactForm() {
         });
         const payload = await response.json();
         if ("error" in payload) throw new Error(payload.error);
-
+        if (!payload.success) throw new Error("Can't send email");
         toast.success("Thank you for contact with me");
       }
     } catch (error) {
-      toast.error(error as string);
+      toast.error(error instanceof Error ? error.message : (error as string));
     } finally {
       setLoading(false);
     }
