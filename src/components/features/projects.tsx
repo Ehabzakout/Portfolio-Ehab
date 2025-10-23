@@ -22,7 +22,7 @@ export default function Projects() {
       summary: `I worked on this Fitness App with a team using Agile methodology. Built with React, it features AI Chat bot,workout sections, meal plans for three levels, muscle-based workout browsing, and instructional videos.`,
       tools:
         "React, Vite,TypeScript, Use-Intl, Tailwind, React Query, shad/cn, React-Hook-Form, Zod ",
-      github: "https://github.com/Ehabzakout/flower-app",
+      github: "https://github.com/Ehabzakout/fitness-app",
       demo: "https://fitness-app-psi-nine.vercel.app/",
     },
     {
