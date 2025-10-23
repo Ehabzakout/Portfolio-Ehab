@@ -1,4 +1,4 @@
-import userImg from "./profile-image.png";
+import userImg from "./profile-image.jpg";
 import vsCode from "./vscode.png";
 import reactICon from "./react.svg";
 import gitIcon from "./git.png";

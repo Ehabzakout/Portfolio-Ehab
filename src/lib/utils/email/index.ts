@@ -10,10 +10,10 @@ const transporter = nodemailer.createTransport({
 });
 
 async function sendEmail({ from, subject, html }: SendMailOptions) {
-  transporter.sendMail({
+  await transporter.sendMail({
     from: `${from} <${process.env.SENDER}>`,
     subject: `Email from ${subject}`,
-    to: "ftwehab@gmail.com",
+    to: process.env.SENDER,
     html,
   });
 }

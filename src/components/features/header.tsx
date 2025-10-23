@@ -1,5 +1,5 @@
 "use client";
-import profileImg from "@assets/images/profile-image.png";
+import profileImg from "@assets/images/profile-image.jpg";
 import handIcon from "@assets/images/hand-icon.png";
 import { GoDownload } from "react-icons/go";
 import { GoArrowRight } from "react-icons/go";
