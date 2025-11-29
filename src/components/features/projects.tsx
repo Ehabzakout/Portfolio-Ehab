@@ -9,6 +9,7 @@ import { TProjects } from "@/lib/types/projects";
 import movieFlex from "@assets/images/screen-1.png";
 import flower from "@assets/images/flower-app.png";
 import fitness from "@assets/images/fitness-app.png";
+import quickAI from "@assets/images/quick-ai.png";
 import sportify from "@assets/images/sportify.png";
 import { useState } from "react";
 import { GoArrowRight } from "react-icons/go";
@@ -16,6 +17,15 @@ import { GoArrowRight } from "react-icons/go";
 export default function Projects() {
   // Projects list
   const projects: TProjects[] = [
+    {
+      image: quickAI,
+      title: "AI Saas",
+      summary: `My full stack a SaaS AI-powered platform, where users can generate and manage creative content with ease. The system integrates multiple AI services (text and image generation, resume review, and more) under authentication and billing model.`,
+      tools:
+        "NextJs, TypeScript, Tailwind, React Query, shad/cn, NodeJS, expressJS, PostgresSQL, neon ",
+      github: "https://github.com/Ehabzakout/quick-ai",
+      demo: "https://quick-ai-jet-nine.vercel.app/",
+    },
     {
       image: fitness,
       title: "Fitness App",
@@ -149,7 +159,7 @@ export default function Projects() {
 
                 {/* Project summary */}
                 <p
-                  className={`mb-3 h-32 text-sm text-gray-600 transition-all duration-500 md:h-22 dark:text-zinc-200`}
+                  className={`mb-3 h-32 text-sm text-gray-600 transition-all duration-500 md:h-28 dark:text-zinc-200`}
                 >
                   {summary}
                 </p>
